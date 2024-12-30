@@ -1,0 +1,12 @@
+name: portfolio
+
+services:
+  server:
+    image: golang:latest
+    container_name: portfolio_server
+    volumes:
+      - ./:/app
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    entrypoint: /bin/sh -c "mkdir -p /app && mkdir -p /app/logs && cd /app && go build -o server.exe server/server.go"

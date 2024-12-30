@@ -225,6 +225,9 @@ section .card .scroll .content.project .bottom .right div {
 section .card#chatter {
   display: none;
 }
+section .card#spelldle {
+  display: none;
+}
 
 section#projects {
   display: flex;

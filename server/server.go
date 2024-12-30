@@ -10,10 +10,12 @@ import (
 	"time"
 )
 
-const PORT string = ":5000"
+const (
+	PORT string = ":5000"
+)
 
 func main() {
-	clientPath := filepath.Join("..", "client")
+	clientPath := filepath.Join("client")
 	fileServer := http.FileServer(http.Dir(clientPath))
 
 	http.Handle("/", fileServer)
