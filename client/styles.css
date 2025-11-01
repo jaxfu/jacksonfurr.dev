@@ -1,0 +1,424 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(to left bottom, #3272c0, #6cdbeb);
+}
+
+svg {
+  z-index: 0;
+  position: fixed;
+}
+
+.navbar {
+  height: 3rem;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(2rem);
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+.navbar a {
+  text-decoration: none;
+  font-weight: 300;
+  margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 5px;
+  color: white;
+}
+.navbar a:hover {
+  background: rgb(198, 176, 176);
+}
+
+section {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section * {
+  z-index: 10;
+}
+section .card {
+  min-width: 60%;
+  width: fit-content;
+  max-width: 80%;
+  max-height: 60%;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  color: white;
+  z-index: 6;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+section .card h2 {
+  background: rgba(255, 255, 255, 0.5);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: black;
+}
+section .card .scroll {
+  height: 100%;
+  overflow: auto;
+}
+section .card .scroll .content {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+section .card .scroll .content.overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section .card .scroll .content.overview .left {
+  border-right: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .card .scroll .content.overview .left img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+section .card .scroll .content.overview .left .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+section .card .scroll .content.overview .left .bottom ul {
+  list-style-position: inside;
+  list-style-type: none;
+  margin-left: 5px;
+}
+section .card .scroll .content.overview .left .bottom ul li {
+  text-align: center;
+  text-wrap: wrap;
+}
+section .card .scroll .content.overview .left .bottom ul li::before {
+  content: "-";
+  margin-right: 5px;
+}
+section .card .scroll .content.overview .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+section .card .scroll .content.overview .right .spelldle {
+  text-decoration: none;
+}
+section .card .scroll .content.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section .card .scroll .content.contact .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+section .card .scroll .content.contact .left div {
+  margin: 5px;
+}
+section .card .scroll .content.contact .left div #cell {
+  width: 5rem;
+}
+section .card .scroll .content.contact .left div #email {
+  width: 5rem;
+}
+section .card .scroll .content.contact .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+}
+section .card .scroll .content.contact .right input {
+  text-align: center;
+}
+section .card .scroll .content.contact .right textarea {
+  margin-bottom: 5px;
+}
+section .card .scroll .content.project {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+section .card .scroll .content.project .top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+section .card .scroll .content.project .top img {
+  width: 100%;
+}
+section .card .scroll .content.project .top .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+section .card .scroll .content.project .bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section .card .scroll .content.project .bottom .left {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+section .card .scroll .content.project .bottom .left div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .card .scroll .content.project .bottom .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+section .card .scroll .content.project .bottom .right div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .card#chatter {
+  display: none;
+}
+section .card#spelldle {
+  display: none;
+}
+
+section#projects {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+section#projects .toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+section#projects .toggle #left {
+  width: 40px;
+  transform: rotate(180deg) translateX(3px);
+}
+section#projects .toggle #right {
+  width: 40px;
+  transform: translateX(3px);
+}
+
+#landing {
+  animation: bounce 3s ease-in-out 0s infinite;
+}
+#landing .intro {
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+}
+#landing .intro h1 {
+  margin-bottom: 10px;
+  font-weight: 1000;
+  font-size: 5rem;
+}
+#landing .intro h2 {
+  margin-bottom: 30px;
+}
+#landing .intro .links {
+  width: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+}
+#landing .intro .links span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#landing .intro .links span a {
+  text-decoration: none;
+  border-radius: 0.2rem;
+}
+#landing .intro .links span a img {
+  width: 6rem;
+  height: 6rem;
+}
+#landing .intro .links span a h3 {
+  font-weight: 300;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 5px;
+  color: white;
+  margin-top: 5px;
+}
+#landing .intro .links span a:hover {
+  background: rgb(198, 176, 176);
+}
+#landing .intro .links span a .linked_in_logo {
+  width: 6rem;
+  height: 6rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@media only screen and (max-width: 750px) {
+  #overview .card {
+    display: flex;
+    flex-direction: column;
+  }
+  #overview .card .content {
+    display: flex;
+    flex-direction: column;
+  }
+  #overview .card .content .left {
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #overview .card .content .left .photo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #overview .card .content .left .photo img {
+    width: 100px;
+    margin: 5px;
+  }
+  #overview .card .content .left .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 5px;
+  }
+  #overview .card .content .left .bottom ul {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left: 5px;
+  }
+  #overview .card .content .left .bottom ul li {
+    text-align: center;
+    text-wrap: wrap;
+  }
+  #overview .card .content .left .bottom ul li::before {
+    content: "-";
+    margin-right: 5px;
+  }
+  #overview .card .content .right {
+    padding: 5px;
+  }
+  #overview .card .content .right .spelldle {
+    text-decoration: none;
+  }
+  #contact .card {
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .card .content {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .card .left {
+    border-right: none;
+  }
+  #contact h4 {
+    font-weight: bolder;
+    font-size: larger;
+  }
+  #projects .card {
+    max-height: 70%;
+    overflow: auto;
+  }
+  #projects .card .scroll {
+    height: 100%;
+    border: 1px solid white;
+  }
+  #projects .card .scroll .content {
+    display: flex;
+    flex-direction: column;
+  }
+  #projects .card .scroll .content .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects .card .scroll .content .top img {
+    width: 100%;
+  }
+  #projects .card .scroll .content .bottom {
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #projects .card .scroll .content .bottom .left {
+    border-right: none;
+  }
+  #projects .card .scroll .content .bottom .left .bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  #projects .card .scroll .content .bottom .right div {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

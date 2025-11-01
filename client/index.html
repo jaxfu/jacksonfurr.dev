@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<title>Jackson Furr</title>
+	<link rel="stylesheet" href="./styles.css" />
+	<link rel="icon" type="image/svg+xml" href="./assets/favicon.png" />
+</head>
+
+<body>
+	<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" preserveAspectRatio="none"
+		xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+		<defs>
+			<linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+				<stop offset="5%" stop-color="#F78DA7"></stop>
+				<stop offset="95%" stop-color="#8ED1FC"></stop>
+			</linearGradient>
+		</defs>
+		<path
+			d="M 0,700 C 0,700 0,233 0,233 C 101.11961722488039,231.77511961722487 202.23923444976077,230.55023923444975 299,208 C 395.7607655502392,185.44976076555025 488.1626794258374,141.57416267942583 570,177 C 651.8373205741626,212.42583732057417 723.11004784689,327.1531100478469 820,320 C 916.88995215311,312.8468899521531 1039.3971291866028,183.8133971291866 1147,149 C 1254.6028708133972,114.1866028708134 1347.3014354066986,173.59330143540672 1440,233 C 1440,233 1440,700 1440,700 Z"
+			stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
+			class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 350)"></path>
+		<defs>
+			<linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+				<stop offset="5%" stop-color="#F78DA7"></stop>
+				<stop offset="95%" stop-color="#8ED1FC"></stop>
+			</linearGradient>
+		</defs>
+		<path
+			d="M 0,700 C 0,700 0,466 0,466 C 80.38277511961724,495.11004784689 160.76555023923447,524.22009569378 246,516 C 331.23444976076553,507.7799043062201 421.32057416267946,462.2296650717704 524,434 C 626.6794258373205,405.7703349282296 741.9521531100478,394.8612440191388 844,421 C 946.0478468899522,447.1387559808612 1034.8708133971293,510.32535885167465 1132,524 C 1229.1291866028707,537.6746411483253 1334.5645933014353,501.8373205741627 1440,466 C 1440,466 1440,700 1440,700 Z"
+			stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+			class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 350)"></path>
+	</svg>
+
+	<div class="navbar">
+		<a href="#landing">Home</a>
+		<a href="#overview">Overview</a>
+		<a href="#projects">Projects</a>
+		<a href="#contact">Contact</a>
+	</div>
+
+	<section id="landing">
+		<div class="intro">
+			<h1>Jackson Furr</h1>
+			<h2>Fullstack Developer</h2>
+			<div class="links">
+				<span>
+					<a href="https://github.com/jaxfu" target="_blank">
+						<img src="assets/github-white.svg" alt="github_logo" />
+						<h3>GitHub</h3>
+					</a>
+				</span>
+
+				<span>
+					<a href="https://www.linkedin.com/in/jackson-furr-8a124225a/" target="_blank">
+						<img class="linked_in_logo" src="assets/linkedin.svg" alt="linkedin_logo" />
+						<h3>LinkedIn</h3>
+					</a>
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<section id="overview">
+		<div class="card">
+			<div class="title">
+				<h2>Overview</h2>
+			</div>
+			<div class="scroll">
+				<div class="content overview">
+					<div class="left">
+						<img src="assets/portfolioAvatar.png" alt="my_headshot" />
+						<div class="bottom">
+							<h3>Education:</h3>
+							<ul>
+								<li>
+									Bachelor of Science in Computer Science from Southern New
+									Hampshire University
+								</li>
+								<li>Graduated December 2024</li>
+								<li>Summa Cum Laude</li>
+								<li>4.0 GPA</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right">
+						<div>
+							Hi! I'm a recent CS grad and FullStack developer from
+							Atlanta, GA. My main interest is back-end development, and I am quite
+							comfortable working with a variety of backend technologies
+							NodeJS and Golang back-ends. I am also familiar with many front-end
+							frameworks and libraries such as React, Svelte, and HTMX. I am currently
+							working on the web application
+							<a href="https://spelldle.app/" target="_blank" class="spelldle">Spelldle</a>,
+							which is a Wordle-like that allows users to test their knowledge of D&D spells.
+							It currently serves almost 1000 daily active users.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects">
+		<div onclick="change_project(-1)" class="toggle">
+			<img id="left" src="assets/right-arrow.png" alt="left_arrow" />
+		</div>
+
+		<div class="card" id="timestrainer">
+			<div class="title">
+				<h2>TimesTrainer</h2>
+			</div>
+			<div class="scroll">
+				<div class="content project">
+					<div class="top">
+						<img src="assets/tt_post.png" alt="timestrainer_screenshot" />
+						<div class="description">
+							TimesTrainer is a SaaS built for math teachers, providing an easy
+							way to teach, assess, and test students on their multiplication tables.
+							Teachers with a premium account can track all of their classes, assign
+							homework for studets, and create custom tests for them to take. Students
+							earn points for completing training sessions, and can compete against
+							their fellow students for the highest leaderboard positions.
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<div class="top">Front End: React w/ Typescript</div>
+							<div class="bottom">Back End: Golang w/ Postgres</div>
+						</div>
+						<div class="right">
+							<div>
+								<a href="https://timestrainer.com" target="_blank">Site</a>
+							</div>
+							<div>
+								<a href="https://github.com/Furrj/testr" target="_blank">Github</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card" id="spelldle">
+			<div class="title">
+				<h2>Spelldle</h2>
+			</div>
+			<div class="scroll">
+				<div class="content project">
+					<div class="top">
+						<img src="assets/spelldle.png" alt="spelldle_screenshot" />
+						<div class="description">
+							Spelldle is a DnD-themed Wordle-like game wherein users guess
+							the category values of an unkown spell, and attempt to guess the
+							spell itself based on the results.
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<div class="top">Front End: React w/ Typescript</div>
+							<div class="bottom">Back End: Go w/ Postgres</div>
+						</div>
+						<div class="right">
+							<div>
+								<a href="https://spelldle.app" target="_blank">Site</a>
+							</div>
+							<div>
+								<a href="https://github.com/Furrj/Spelldle" target="_blank">Github</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card" id="chatter">
+			<div class="title">
+				<h2>Chatter</h2>
+			</div>
+			<div class="scroll">
+				<div class="content project">
+					<div class="top">
+						<img src="assets/chatter.png" alt="chatter_screenshot" />
+						<div class="description">
+							Chatter is a social media platform that allows users to make
+							posts and interact with the posts of others. It also features
+							different sub-forums tailored to different interests.
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<div class="top">Front End: React w/ Typescript</div>
+							<div class="bottom">Back End: NodeJS w/ MongoDB</div>
+						</div>
+						<div class="right">
+							<div>
+								<a href="https://chatter.jacksonfurr.dev" target="_blank">Site</a>
+							</div>
+							<div>
+								<a href="https://github.com/Furrj/ChatterAPI" target="_blank">Back End Github</a>
+							</div>
+							<div>
+								<a href="https://github.com/Furrj/ChatterClient" target="_blank">Front End Github</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div onclick="change_project(1)" class="toggle">
+			<img id="right" src="assets/right-arrow.png" alt="right_arrow" />
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="card">
+			<div class="title">
+				<h2>Contact</h2>
+			</div>
+			<div class="scroll">
+				<div class="content contact">
+					<div class="left">
+						<div>
+							<img id="cell" src="assets/cellphone.png" alt="cellphone_icon" />
+							<h4>678-852-1980</h4>
+						</div>
+						<div>
+							<img id="email" src="assets/email.png" alt="email_icon" />
+							<h4>jackson.a.furr@gmail.com</h4>
+						</div>
+					</div>
+					<form class="right" onsubmit="send_message(event)">
+						<h3>Contact Info</h3>
+						<input type="email" name="email" autocomplete="email" required />
+						<h3>Message</h3>
+						<textarea name="message" cols="30" rows="9" required></textarea>
+						<button type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="./main.js"></script>
+</body>
+
+</html>
